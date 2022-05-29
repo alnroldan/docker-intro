@@ -1,0 +1,2 @@
+# docker execution
+docker exec -it 2e5a35cfed54 mysql -p

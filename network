@@ -1,0 +1,2 @@
+# network creation
+docker network create todo-app

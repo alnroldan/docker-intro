@@ -1,0 +1,21 @@
+version: 3.7
+
+services:
+
+        app: 
+          image: pablokbs/getting-started:v2``
+          ports:
+            - 3000:3000
+          environment:
+            MYSQL_HOST: myslq
+            MYSQL_USER: root
+            MYSQL_PASSWORD: secret
+            MYSQL_DB: todos
+
+        myslq:
+          image: mysql: 5.7.38
+          volumes: 
+            - /home/jaroldan/repos/multi-container/todo-mysql-data:/var/lib/mysql
+          environment:
+            MYSQL_ROOT_PASSWORD: secret
+            MYSQL_DATABASE: todos

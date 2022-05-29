@@ -1,0 +1,7 @@
+#mysql
+docker run -d \
+ 	--network todo-app --network-alias mysql \
+ 	-v /home/jaroldan/repos/multi-container/todo-mysql-data:/var/lib/mysql \
+	-e MYSQL_ROOT_PASSWORD=secret \
+	-e MYSQL_DATABASE=todos \
+  	mysql:5.7.38
